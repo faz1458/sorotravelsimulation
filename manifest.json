@@ -1,6 +1,6 @@
 {
-  "name": "My Unity Game",
-  "short_name": "UnityGame",
+  "name": "一人旅シミュレーション",
+  "short_name": "一人旅シミュレーション",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#000000",
