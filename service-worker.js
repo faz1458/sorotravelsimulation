@@ -23,6 +23,7 @@ const urlsToCache = [
   'MobileBuild/Build/MobileGame.data'
 ];
 
+// インストール時にキャッシュ登録
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
@@ -31,7 +32,7 @@ self.addEventListener('install', function (event) {
   );
 });
 
-// ★ 古いキャッシュを削除する処理を追加
+// 古いキャッシュを削除
 self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (cacheNames) {
@@ -46,10 +47,11 @@ self.addEventListener('activate', function (event) {
   );
 });
 
+// ネットワーク優先の fetch 処理
 self.addEventListener('fetch', function (event) {
   event.respondWith(
-    caches.match(event.request).then(function (response) {
-      return response || fetch(event.request);
+    fetch(event.request).catch(function () {
+      return caches.match(event.request);
     })
   );
 });
