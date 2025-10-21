@@ -1,0 +1,22 @@
+{
+  "project_info": {
+    "project_id": "solotravelsimulation",
+    "firebase_url": "https://solotravelsimulation.firebaseio.com",
+    "storage_bucket": "solotravelsimulation.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429428161454:desktop:5991dd2f066c3a79c0a63f",
+        "android_client_info": {
+          "package_name": "com.kosei.solotravel"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV5p-K9uUNtv6a-OS-3mBChyOQm3LGRgo"
+        }
+      ]
+    }
+  ]
+}
